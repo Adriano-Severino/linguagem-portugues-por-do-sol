@@ -1,0 +1,35 @@
+{
+  "name": "linguagem-portugues-por-do-sol",
+  "displayName": "Linguagem Portuguesa Por Do Sol",
+  "description": "Linguagem de programação moderna em português brasileiro",
+  "version": "0.0.1",
+  "publisher": "adriano-severino",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Adriano-Severino/linguagem-portugues-por-do-sol.git"
+  },
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pordosol",
+      "aliases": ["Por Do Sol", "pordosol"],
+      "extensions": [".pr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pordosol",
+      "scopeName": "source.pordosol",
+      "path": "./syntaxes/pordosol.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "pordosol",
+      "path": "./snippets/pordosol.json"
+    }]
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "Programa Principal": {
+        "prefix": "main",
+        "body": [
+            "// Programa principal",
+            "inteiro ${1:numero} = ${2:0};",
+            "texto ${3:mensagem} = \"${4:Olá mundo}\";",
+            "",
+            "imprima(${3:mensagem});",
+            "imprima(${1:numero});"
+        ],
+        "description": "Template de programa principal"
+    },
+    "Estrutura Se": {
+        "prefix": "se",
+        "body": [
+            "se ${1:condicao} então {",
+            "\t${2:// código}",
+            "}"
+        ],
+        "description": "Estrutura condicional se"
+    },
+    "Loop Enquanto": {
+        "prefix": "enquanto",
+        "body": [
+            "enquanto ${1:condicao} {",
+            "\t${2:// código}",
+            "}"
+        ],
+        "description": "Loop enquanto"
+    }
+}

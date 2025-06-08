@@ -1,0 +1,27 @@
+{
+  "Imprima": {
+    "prefix": "imprima",
+    "body": [
+      "imprima(${1:\"mensagem\"});"
+    ],
+    "description": "Comando imprima"
+  },
+  "Se então": {
+    "prefix": "se",
+    "body": [
+      "se ${1:condicao} então {",
+      "\t${2:// código}",
+      "}"
+    ],
+    "description": "Estrutura condicional"
+  },
+  "Enquanto": {
+    "prefix": "enquanto",
+    "body": [
+      "enquanto ${1:condicao} {",
+      "\t${2:// código}",
+      "}"
+    ],
+    "description": "Loop enquanto"
+  }
+}
