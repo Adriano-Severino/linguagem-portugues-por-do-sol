@@ -29,9 +29,6 @@
         "orientada-objetos",
         "ownership"
     ],
-    "activationEvents": [
-        "onLanguage:pordosol"
-    ],
     "contributes": {
         "languages": [{
             "id": "pordosol",
@@ -57,15 +54,5 @@
             "uiTheme": "vs-dark",
             "path": "./themes/pordosol-dark.json"
         }]
-    },
-    "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "package": "vsce package"
-    },
-    "devDependencies": {
-        "@types/vscode": "^1.100.0",
-        "typescript": "^4.9.4",
-        "vsce": "^2.15.0"
     }
 }
