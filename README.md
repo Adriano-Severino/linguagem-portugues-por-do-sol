@@ -25,7 +25,8 @@ se (idade >= 18)
 {
     imprima("Maior de idade");
     imprima(nome);
-} senão 
+} 
+senão 
 {
     imprima("Menor de idade");
 }
@@ -39,7 +40,7 @@ enquanto contador <= 5
 
 espaco MeuPrograma 
 {
-    classe Pessoa 
+    publico classe Pessoa 
     {
         publico texto Nome { buscar; definir; }
         publico inteiro Idade { buscar; definir; }
