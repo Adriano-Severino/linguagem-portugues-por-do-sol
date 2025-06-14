@@ -1,35 +1,71 @@
 {
-  "name": "linguagem-portugues-por-do-sol",
-  "displayName": "Linguagem Portuguesa Por Do Sol",
-  "description": "Linguagem de programação moderna em português brasileiro",
-  "version": "0.0.1",
-  "publisher": "adriano-severino",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Adriano-Severino/linguagem-portugues-por-do-sol.git"
-  },
-  "engines": {
-    "vscode": "^1.100.0"
-  },
-  "categories": [
-    "Programming Languages",
-    "Snippets"
-  ],
-  "contributes": {
-    "languages": [{
-      "id": "pordosol",
-      "aliases": ["Por Do Sol", "pordosol"],
-      "extensions": [".pr"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "pordosol",
-      "scopeName": "source.pordosol",
-      "path": "./syntaxes/pordosol.tmLanguage.json"
-    }],
-    "snippets": [{
-      "language": "pordosol",
-      "path": "./snippets/pordosol.json"
-    }]
-  }
+    "name": "linguagem-portugues-por-do-sol",
+    "displayName": "🌅 Por Do Sol - Linguagem Portuguesa",
+    "description": "Linguagem de programação moderna orientada a objetos em português brasileiro com ownership e interpolação de strings",
+    "version": "1.0.0",
+    "publisher": "adriano-severino",
+    "author": {
+        "name": "Adriano Severino"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Adriano-Severino/linguagem-portugues-por-do-sol.git"
+    },
+    "engines": {
+        "vscode": "^1.100.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "português",
+        "brazilian",
+        "portuguese",
+        "programming",
+        "linguagem",
+        "orientada-objetos",
+        "ownership"
+    ],
+    "activationEvents": [
+        "onLanguage:pordosol"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pordosol",
+            "aliases": ["Por Do Sol", "pordosol", "PorDoSol"],
+            "extensions": [".pr", ".pds"],
+            "configuration": "./language-configuration.json",
+            "icon": {
+                "light": "./icons/pordosol-light.svg",
+                "dark": "./icons/pordosol-dark.svg"
+            }
+        }],
+        "grammars": [{
+            "language": "pordosol",
+            "scopeName": "source.pordosol",
+            "path": "./syntaxes/pordosol.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "pordosol",
+            "path": "./snippets/pordosol.json"
+        }],
+        "themes": [{
+            "label": "Por Do Sol Dark",
+            "uiTheme": "vs-dark",
+            "path": "./themes/pordosol-dark.json"
+        }]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.100.0",
+        "typescript": "^4.9.4",
+        "vsce": "^2.15.0"
+    }
 }

@@ -1,27 +1,144 @@
 {
-  "Imprima": {
-    "prefix": "imprima",
-    "body": [
-      "imprima(${1:\"mensagem\"});"
-    ],
-    "description": "Comando imprima"
-  },
-  "Se então": {
-    "prefix": "se",
-    "body": [
-      "se ${1:condicao} então {",
-      "\t${2:// código}",
-      "}"
-    ],
-    "description": "Estrutura condicional"
-  },
-  "Enquanto": {
-    "prefix": "enquanto",
-    "body": [
-      "enquanto ${1:condicao} {",
-      "\t${2:// código}",
-      "}"
-    ],
-    "description": "Loop enquanto"
-  }
+    "Imprima": {
+        "prefix": "imprima",
+        "body": [
+            "imprima(${1:\"mensagem\"});"
+        ],
+        "description": "Comando imprima"
+    },
+    "Se então": {
+        "prefix": "se",
+        "body": [
+            "se (${1:condicao}) {",
+            "\t${2:// código}",
+            "}"
+        ],
+        "description": "Estrutura condicional"
+    },
+    "Se então senão": {
+        "prefix": "sesenao",
+        "body": [
+            "se (${1:condicao}) {",
+            "\t${2:// código verdadeiro}",
+            "} senão {",
+            "\t${3:// código falso}",
+            "}"
+        ],
+        "description": "Estrutura condicional completa"
+    },
+    "Enquanto": {
+        "prefix": "enquanto",
+        "body": [
+            "enquanto (${1:condicao}) {",
+            "\t${2:// código}",
+            "}"
+        ],
+        "description": "Loop enquanto"
+    },
+    "Para": {
+        "prefix": "para",
+        "body": [
+            "para (${1:inteiro i = 0}; ${2:i < 10}; ${3:i = i + 1}) {",
+            "\t${4:// código}",
+            "}"
+        ],
+        "description": "Loop para"
+    },
+    "Classe": {
+        "prefix": "classe",
+        "body": [
+            "classe ${1:NomeClasse} {",
+            "\t${2:publico} ${3:inteiro} ${4:propriedade};",
+            "",
+            "\tconstrutor ${1:NomeClasse}(${5:parametros}) {",
+            "\t\t${6:// inicialização}",
+            "\t}",
+            "",
+            "\t${2:publico} ${7:vazio} ${8:metodo}() {",
+            "\t\t${9:// código do método}",
+            "\t}",
+            "}"
+        ],
+        "description": "Declaração de classe"
+    },
+    "Construtor": {
+        "prefix": "construtor",
+        "body": [
+            "construtor ${1:NomeClasse}(${2:parametros}) {",
+            "\t${3:// inicialização}",
+            "}"
+        ],
+        "description": "Método construtor"
+    },
+    "Função": {
+        "prefix": "funcao",
+        "body": [
+            "funcao ${1:nome}(${2:parametros}) => ${3:tipo} {",
+            "\t${4:// código}",
+            "\tretorne ${5:valor};",
+            "}"
+        ],
+        "description": "Declaração de função"
+    },
+    "Namespace": {
+        "prefix": "espaco",
+        "body": [
+            "espaco ${1:NomeNamespace} {",
+            "\t${2:// conteúdo}",
+            "}"
+        ],
+        "description": "Declaração de namespace"
+    },
+    "Interpolação String": {
+        "prefix": "interpolacao",
+        "body": [
+            "\\$\"${1:texto} {${2:variavel}} ${3:mais texto}\""
+        ],
+        "description": "String com interpolação"
+    },
+    "Novo Objeto": {
+        "prefix": "novo",
+        "body": [
+            "novo ${1:Classe}(${2:argumentos})"
+        ],
+        "description": "Criação de novo objeto"
+    },
+    "Programa Principal": {
+        "prefix": "main",
+        "body": [
+            "funcao inteiro main() {",
+            "\t${1:// código principal}",
+            "\tretorne 0;",
+            "}"
+        ],
+        "description": "Função principal"
+    },
+    "Declaração Variável": {
+        "prefix": "var",
+        "body": [
+            "var ${1:nome} = ${2:valor};"
+        ],
+        "description": "Declaração com inferência de tipo"
+    },
+    "Tipo Inteiro": {
+        "prefix": "int",
+        "body": [
+            "inteiro ${1:nome} = ${2:0};"
+        ],
+        "description": "Declaração de inteiro"
+    },
+    "Tipo Texto": {
+        "prefix": "txt",
+        "body": [
+            "texto ${1:nome} = \"${2:valor}\";"
+        ],
+        "description": "Declaração de texto"
+    },
+    "Tipo Booleano": {
+        "prefix": "bool",
+        "body": [
+            "booleano ${1:nome} = ${2:verdadeiro};"
+        ],
+        "description": "Declaração de booleano"
+    }
 }

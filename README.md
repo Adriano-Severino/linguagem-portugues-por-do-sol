@@ -1,29 +1,18 @@
 # 🌅 Por Do Sol
 
-Extensão do **Visual Studio Code** para a linguagem de programação **Por Do Sol** — uma linguagem moderna em português brasileiro.
+Extensão do **Visual Studio Code** para a linguagem de programação **Por Do Sol** — uma linguagem moderna orientada a objetos em português brasileiro.
 
----
+## ✨ Novas Características
 
-## ✨ Características
+- ✅ **Orientação a Objetos completa:** classes, herança, encapsulamento
+- ✅ **Sistema de Ownership:** inspirado no Rust para segurança de memória
+- ✅ **Interpolação de Strings:** `$"Olá {nome}, você tem {idade} anos"`
+- ✅ **Namespaces:** organização modular do código
+- ✅ **Construtores:** estilo C# com parâmetros padrão
+- ✅ **Inferência de tipos:** declaração com `var`
+- ✅ **Compilação LLVM:** performance otimizada
 
-- ✅ **Sintaxe em português:** `se`, `então`, `enquanto`, `imprima`
-- ✅ **Syntax Highlighting** completo
-- ✅ **Autocomplete inteligente** com snippets
-- ✅ **Suporte a tipos:** `inteiro`, `texto`, `booleano`
-- ✅ **Estruturas de controle:** condicionais e loops
-- ✅ **Comentários:** `//` linha e `/* */` bloco
-
----
-
-## 🚀 Instalação
-
-1. Baixe o arquivo `.vsix`
-2. No VS Code: `Ctrl+Shift+P` → **Extensions: Install from VSIX...**
-3. Selecione o arquivo baixado
-
----
-
-## 💻 Exemplo de Uso
+## 💻 Exemplo Completo
 
 Crie arquivos com extensão `.pr`:
 
@@ -32,31 +21,85 @@ Crie arquivos com extensão `.pr`:
 inteiro idade = 25;
 texto nome = "joana";
 
-se idade >= 18 então {
+se (idade >= 18) 
+{
     imprima("Maior de idade");
     imprima(nome);
-} senão {
+} senão 
+{
     imprima("Menor de idade");
 }
 
 inteiro contador = 1;
-enquanto contador <= 5 {
+enquanto contador <= 5 
+{
     imprima(contador);
     contador = contador + 1;
 }
+
+espaco MeuPrograma 
+{
+    classe Pessoa 
+    {
+        publico texto Nome { buscar; definir; }
+        publico inteiro Idade { buscar; definir; }
+        
+        publico Pessoa(texto nome, inteiro idade = 18) 
+        {
+            este.Nome = nome;
+            este.Idade = idade;
+        }
+        
+        publico vazio apresentar() {
+        imprima($"Nome: {este.Nome}, Idade: {este.Idade}");
+    }
+    
+    publico booleano maiorIdade() 
+    {
+        se (este.Idade >= 18) 
+        {
+            retorne verdadeiro;
+        }
+        retorne falso;
+    }
+}
+
+funcao inteiro main() 
+{
+    var pessoa = novo Pessoa("João", 25);
+    pessoa.apresentar();
+    se (pessoa.maiorIdade()) 
+    {
+        imprima("Pode dirigir!");
+    } 
+    senão 
+    {
+        imprima("Muito jovem para dirigir.");
+    }
+}
+
+retorne 0;
+
+
 ```
 
----
+## 🧩 Snippets Avançados
 
-## 🧩 Snippets Disponíveis
+- `classe` — Classe completa com construtor e métodos
+- `funcao` — Função com tipo de retorno
+- `espaco` — Namespace
+- `interpolacao` — String interpolada
+- `novo` — Criação de objeto
+- `main` — Função principal
 
-- `se` — Estrutura condicional
-- `enquanto` — Loop enquanto
-- `imprima` — Comando de impressão
-- `int` — Declaração de inteiro
-- `texto` — Declaração de texto
+## 🔧 Correções Implementadas
 
----
+1. **Syntax Highlighting** para interpolação de strings `$"..."`[1][3]
+2. **Snippets** para orientação a objetos[1][2]
+3. **Auto-completion** para palavras-chave OOP[4]
+4. **Folding** de blocos de código[4]
+5. **Suporte a múltiplas extensões** `.pr` e `.pds`[5]
+
 
 ## 🛠️ Recursos
 
@@ -65,24 +108,21 @@ enquanto contador <= 5 {
 - **Comment Toggle** — `Ctrl+/` para comentários
 - **Code Folding** — Dobrar blocos de código
 
----
 
 ## 👨‍💻 Desenvolvedor
 
 Criado por **Adriano Severino** como parte do desenvolvimento de uma linguagem de programação educacional em português brasileiro.
 
----
 
 ## 📄 Licença
 
 MIT License
 
----
 
 ## 📦 Empacotando a Extensão
 
 1. Salve o arquivo (`Ctrl+S`)
-2. No terminal, execute:
+2. Para gerar a extensão atualizada, execute:
    ```powershell
    vsce package
    ```
@@ -91,5 +131,3 @@ MIT License
    ```pr
    linguagem-portugues-por-do-sol-0.0.1.vsix
    ```
-
----
