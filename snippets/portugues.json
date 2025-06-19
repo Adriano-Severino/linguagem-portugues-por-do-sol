@@ -14,7 +14,8 @@
     "Estrutura Se": {
         "prefix": "se",
         "body": [
-            "se ${1:condicao} então {",
+            "se ${1:condicao} então",
+            "{",
             "\t${2:// código}",
             "}"
         ],
@@ -23,7 +24,8 @@
     "Loop Enquanto": {
         "prefix": "enquanto",
         "body": [
-            "enquanto ${1:condicao} {",
+            "enquanto ${1:condicao}",
+            "{",
             "\t${2:// código}",
             "}"
         ],

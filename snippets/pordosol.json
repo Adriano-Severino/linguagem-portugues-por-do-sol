@@ -9,7 +9,8 @@
     "Se então": {
         "prefix": "se",
         "body": [
-            "se (${1:condicao}) {",
+            "se (${1:condicao})",
+            "{",
             "\t${2:// código}",
             "}"
         ],
@@ -18,9 +19,12 @@
     "Se então senão": {
         "prefix": "sesenao",
         "body": [
-            "se (${1:condicao}) {",
+            "se (${1:condicao})",
+            "{",
             "\t${2:// código verdadeiro}",
-            "} senão {",
+            "}",
+            "senão",
+            "{",
             "\t${3:// código falso}",
             "}"
         ],
@@ -29,7 +33,8 @@
     "Enquanto": {
         "prefix": "enquanto",
         "body": [
-            "enquanto (${1:condicao}) {",
+            "enquanto (${1:condicao})",
+            "{",
             "\t${2:// código}",
             "}"
         ],
@@ -47,7 +52,8 @@
     "Classe Corrigida": {
         "prefix": "classe",
         "body": [
-            "classe ${1:NomeClasse} {",
+            "classe ${1:NomeClasse}",
+            "{",
             "\t${2:publico} ${3:inteiro} ${4:propriedade};",
             "",
             "\t${1:NomeClasse}(${5:parametros}) {",
@@ -64,16 +70,18 @@
     "Construtor": {
         "prefix": "construtor",
         "body": [
-            "${1:NomeClasse}(${2:parametros}) {",
+            "${1:NomeClasse}(${2:parametros})",
+            "{",
             "\t${3:// inicialização}",
             "}"
         ],
         "description": "Método construtor com nome da classe"
     },
-    "Função": {
-        "prefix": "funcao",
+    "função": {
+        "prefix": "função",
         "body": [
-            "funcao ${1:nome}(${2:parametros}) => ${3:tipo} {",
+            "função ${1:nome}(${2:parametros}) => ${3:tipo}",
+            "{",
             "\t${4:// código}",
             "\tretorne ${5:valor};",
             "}"
@@ -83,7 +91,8 @@
     "Namespace": {
         "prefix": "espaco",
         "body": [
-            "espaco ${1:NomeNamespace} {",
+            "espaco ${1:NomeNamespace}",
+            "{",
             "\t${2:// conteúdo}",
             "}"
         ],
@@ -106,12 +115,13 @@
     "Programa Principal": {
         "prefix": "main",
         "body": [
-            "funcao inteiro main() {",
+            "função inteiro main()",
+            "{",
             "\t${1:// código principal}",
             "\tretorne 0;",
             "}"
         ],
-        "description": "Função principal"
+        "description": "função principal"
     },
     "Declaração Variável": {
         "prefix": "var",

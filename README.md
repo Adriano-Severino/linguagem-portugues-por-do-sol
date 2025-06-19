@@ -65,7 +65,7 @@ espaco MeuPrograma
     }
 }
 
-funcao inteiro main() 
+função inteiro main() 
 {
     var pessoa = novo Pessoa("João", 25);
     pessoa.apresentar();
@@ -87,7 +87,7 @@ retorne 0;
 ## 🧩 Snippets Avançados
 
 - `classe` — Classe completa com construtor e métodos
-- `funcao` — Função com tipo de retorno
+- `função` — Função com tipo de retorno
 - `espaco` — Namespace
 - `interpolacao` — String interpolada
 - `novo` — Criação de objeto
